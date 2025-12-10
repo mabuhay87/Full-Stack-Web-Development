@@ -40,9 +40,9 @@ This project demonstrates real-world enterprise development using C#, Entity Fra
 
 # Getting Started
 ## Unzip the file somewhere on your machine.
-Open Visual Studio 2022(or your version) → File → Open → Project/Solution → select HelpdeskTicketingSystem.sln.
-Make sure your .sln projecdt file is inside the unzip folder for this project to work.
-I have to zip this large project so I can easily upload this to github.
+- Open Visual Studio 2022(or your version) → File → Open → Project/Solution → select HelpdeskTicketingSystem.sln.
+- Make sure your .sln project file is inside the unzip folder for this project to work.
+- I have to zip this large project so I can easily upload this to github.
 
 ## In Package Manager Console, run:
 - Add-Migration InitialCreate - creates the migration file for the Ticket table.
@@ -62,4 +62,5 @@ In appsettings.json, set up LocalDB:
 3. View/change ticket status
 4. Log who requested and who is assigned
 5. Keep a clean audit trail of changes
+
 
