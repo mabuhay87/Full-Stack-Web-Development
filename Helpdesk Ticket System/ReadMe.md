@@ -51,10 +51,10 @@ This project demonstrates real-world enterprise development using C#, Entity Fra
 - Hit F5 (or Run).
 
 ## Update the Database Connection String
-In appsettings.json, set up LocalDB:
-"ConnectionStrings": {
-  "DefaultConnection": "Server=(localdb)\\MSSQLLocalDB;Database=HelpdeskTicketingSystemDb;Trusted_Connection=True;"
-}
+- In appsettings.json, set up LocalDB:
+- "ConnectionStrings": {
+-   "DefaultConnection": "Server=(localdb)\\MSSQLLocalDB;Database=HelpdeskTicketingSystemDb;Trusted_Connection=True;"
+- }
 
 ## What You Can Do
 1. Submit a new ticket
@@ -62,5 +62,6 @@ In appsettings.json, set up LocalDB:
 3. View/change ticket status
 4. Log who requested and who is assigned
 5. Keep a clean audit trail of changes
+
 
 
