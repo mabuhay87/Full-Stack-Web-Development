@@ -38,11 +38,13 @@ This project demonstrates real-world enterprise development using C#, Entity Fra
 | ORM | Entity Framework Core |
 | IDE | Visual Studio 2022(This is the version I have in my machine.) |
 
-
 # Getting Started
 ## Unzip the file somewhere on your machine.
-Open Visual Studio 2022(or your vesion) → File → Open → Project/Solution → select HelpdeskTicketingSystem.sln.
-# In Package Manager Console, run:
+Open Visual Studio 2022(or your version) → File → Open → Project/Solution → select HelpdeskTicketingSystem.sln.
+Make sure your .sln projecdt file is inside the unzip folder for this project to work.
+I have to zip this large project so I can easily upload this to github.
+
+## In Package Manager Console, run:
 - Add-Migration InitialCreate - creates the migration file for the Ticket table.
 - Update-Database – actually creates the HelpdeskTicketingSystemDb database and the Tickets table.
 - After run: Check your SSMS database and table.
@@ -60,3 +62,4 @@ In appsettings.json, set up LocalDB:
 3. View/change ticket status
 4. Log who requested and who is assigned
 5. Keep a clean audit trail of changes
+
