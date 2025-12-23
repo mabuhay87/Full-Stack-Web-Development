@@ -1,0 +1,39 @@
+
+@{
+    ViewData["Title"] = "Welcome";
+}
+
+<div class="py-5">
+    <div class="row align-items-center g-4">
+        <div class="col-lg-7">
+            <h1 class="display-5 fw-bold">Appointment Booking</h1>
+            <p class="lead text-muted">
+                A simple clinic/salon booking system built with ASP.NET Core MVC. Customers can book appointments online.
+            </p>
+
+            <div class="d-flex gap-2">
+                <a class="btn btn-primary btn-lg" asp-controller="Appointments" asp-action="Create">
+                    Book an Appointment
+                </a>
+                <a class="btn btn-outline-secondary btn-lg" asp-controller="Appointments" asp-action="Index">
+                    View Schedule (Staff)
+                </a>
+            </div>
+
+            <div class="mt-3 text-muted small">
+                Demo rule: appointments are 30 minutes and can’t overlap for the same service.
+            </div>
+        </div>
+
+        <div class="col-lg-5 text-center">
+            <div class="p-4 border rounded-4 bg-light">
+                <div class="fw-semibold mb-2">Services</div>
+                <ul class="list-unstyled mb-0">
+                    <li>• Consultation</li>
+                    <li>• Haircut</li>
+                    <li>• Therapy</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

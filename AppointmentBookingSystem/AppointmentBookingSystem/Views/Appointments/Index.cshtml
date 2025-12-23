@@ -1,0 +1,57 @@
+
+@model IEnumerable<AppointmentBookingSystem.Models.Appointment>
+@{
+    ViewData["Title"] = "Appointments";
+}
+
+<div class="d-flex align-items-center justify-content-between mb-3">
+    <h2 class="mb-0">Appointments</h2>
+    <a class="btn btn-primary" asp-action="Create">New Booking</a>
+</div>
+
+@if (TempData["Success"] is string msg)
+{
+    <div class="alert alert-success">@msg</div>
+}
+
+@if (!Model.Any())
+{
+    <div class="alert alert-info">No appointments yet.</div>
+}
+else
+{
+    <div class="table-responsive">
+        <table class="table table-hover align-middle">
+            <thead>
+                <tr>
+                    <th>Customer</th>
+                    <th>Email</th>
+                    <th>Date/Time</th>
+                    <th>Service</th>
+                    <th class="text-end">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var a in Model)
+                {
+                    <tr>
+                        <td>@a.CustomerName</td>
+                        <td>@a.Email</td>
+                        <td>@a.AppointmentDate.ToString("MMM dd, yyyy h:mm tt")</td>
+                        <td><span class="badge bg-secondary">@a.Service</span></td>
+                        <td class="text-end">
+                            <form asp-action="Delete" method="post" class="d-inline">
+                                @Html.AntiForgeryToken()
+                                <input type="hidden" name="id" value="@a.Id" />
+                                <button type="submit" class="btn btn-sm btn-outline-danger"
+                                        onclick="return confirm('Delete this appointment?');">
+                                    Delete
+                                </button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}
